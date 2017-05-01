@@ -1,0 +1,47 @@
+.App {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.content {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: o;
+    text-align: center;
+    background-color: #b9c2ca;
+    border: 1px solid;
+    height: 676px;
+
+}
+.loginform{
+  margin-top: 190px;
+  color: aliceblue;
+}
+h1{
+  font-size: 20px
+}
+button {
+    color: #f0f8fb;
+    border: 1px solid;
+    background-color: #b9c2ca;
+    margin-left: 10px;
+    margin-top: 19px;
+}
+.body {
+    background-color: #5a6773;
+    width: 50%;
+    height: 100%;
+    margin-left: 300px;
+    margin-top: 151px;
+}
+form {
+      margin-top: -120px;
+ 
+}
+ul {
+  color: azure;
+  list-style-type: none;
+}
