@@ -1,84 +1,72 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
-import './App.css';
-
-class App extends Component {
-  constructor() {
-    super();
-      this.state = {
-        todos: [],
-        title: "todoapp",
-        counter:0
-      }
-this.addtodo = this.addtodo.bind(this); 
-this.deletetodo = this.deletetodo.bind(this);
+import { Link } from 'react-router-dom';
+import List from './List.js';
+import Project from './Project.js';
+import Search from './Search.js'
 
 
-}
- addtodo(event) {
-   event.preventDefault();
-   let name = this.refs.field.value;
-   let counter = this.state.counter;
-   let todo = {
-     name,
-     counter
-   };
-
-     counter+=1;
-    let todos = this.state.todos;
-   todos.push(todo);
-
-   this.setState({
-     todos: todos,
-     counter: counter
-   
-   });
-
-   this.refs.todoform.reset();
-  } 
-
-  deletetodo(index) {
+class Listing extends Component {
+  constructor(props){
+    super(props);
+    this.state= {
+      projects: [
+        {
+          title:"ProjectA",
+          description:"this is a project A",
+          category:"Book store"
+        },
+        {
+          title:"ProjectB",
+          description:"this is a project B",
+          category:"Vegetable store"
+        },
+        {
+          title:"ProjectC",
+          description:"this is a project C",
+          category:"Fruits store"
+        }
+      ],
+      searchtext :""
+     
+    }
+    this.handlechange = this.handlechange.bind(this);
+  }
   
-    let todos = this.state.todos;
-    let todo = todos.find(function(todo) {
-      return todo.counter == index
+  handlechange(text) {
+    this.setState({
+       searchtext : text
     });
 
-    todos.splice(todo,1);
-    console.log(todos);
-    this.setState({
-      todos:todos
-    });
   }
 
-
   render() {
-    let title = this.state.title;
-    let todos = this.state.todos;
+    let projects = this.state.projects;
+    let searchtext = this.state.searchtext;
+    let name =this.props.location.search.replace(/[?]/,"");
     return (
       <div className="App">
-         
-            <button>Todo List </button>
-            <button>Dashboard</button>
-                <div className ="body">
-                  <form ref ="todoform">
-                    <input type="text" ref="field" placeholder="list" />
-                    <button onClick={this.addtodo}>Add</button>
-                    </form>
+         <div className="content">
+           <h1>welcome {name}</h1><br/>
+            <Link to ="/List"> <button>Todo List </button></Link>
+               <button>Dashboard</button> 
+                 <Link to ="/">  <button>Logout</button> </Link>
+                   <div className ="body">
+                     <Search 
+                      change ={this.handlechange} 
+                      />
+                   <Project
+                    project ={projects}
+                    searchtext ={this.state.searchtext}
+                    />
+                 
                 
-        <ul>
-        
-            {todos.map((todo => <li key ={todo.counter}>{todo.name}
-              <button onClick={this.deletetodo.bind(null,todo.counter)}>Delete</button>
-          
-              </li>))}
-            
-        </ul>
+                </div>
+             
+       
           </div>
-        </div>
- 
+      </div>
     );
   }
 }
 
-export default App;
+export default Listing;

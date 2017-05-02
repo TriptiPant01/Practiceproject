@@ -13,11 +13,11 @@
     text-align: center;
     background-color: #b9c2ca;
     border: 1px solid;
-    height: 676px;
+   
+   
 
 }
 .loginform{
-  margin-top: 190px;
   color: aliceblue;
 }
 h1{
@@ -31,11 +31,15 @@ button {
     margin-top: 19px;
 }
 .body {
-    background-color: #5a6773;
+
     width: 50%;
-    height: 100%;
-    margin-left: 300px;
-    margin-top: 151px;
+    /* height: 100%; */
+    margin-left: 312px;
+    margin-top: 130px;
+    margin-bottom: 39px;
+    padding-bottom: 23px;
+  
+
 }
 form {
       margin-top: -120px;
@@ -44,4 +48,29 @@ form {
 ul {
   color: azure;
   list-style-type: none;
+      text-align: center;
+    padding-bottom: 12px;
+ 
+}
+ul li {
+  border: 1px solid;
+  width: 571px;
+  padding-bottom: 10px;
+}
+.list{
+ background-color: #5a6773; 
+}
+.dashboardlist{
+    border: 1px solid;
+    list-style-type: none;
+    width: 608px;
+    margin-top: -49px;
+    border-radius: 11px;
+}   
+
+ol {
+  list-style-type: none;
+}
+.search{
+  
 }

@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
-import Home from './Home.js'
+import Home from './Home.js';
+import { Link } from 'react-router-dom';
+import Dashboard from './Dashboard.js';
+import List from './List.js';
+
 
 class Login extends Component {
     constructor(props) {
@@ -9,22 +13,35 @@ class Login extends Component {
     }
     change (event) {
         this.props.changevalue(event.target.value);
-        console.log("test");
     }
     
+    // handleclick() {
+    //     console.log(this.props.name);
+    //     debugger
+    //    if(this.props.name  == null || this.props.name ==undefined || this.props.name  == '') {
+    //        alert("sdf");
+    //    }
+    // }
     render() {
+        let name = this.props.name;
+        console.log(name);
         return (
             <div className="content">
                     <div className="loginform">
-                        <h1> Please Enter Your Name</h1>
+                        <h1>Please Enter Your Name</h1>
                         <input type="text" 
                         placeholder="Name" 
                         onChange={this.change}
                         value = {this.props.name}
                         /><br/>
-                        <button >Submit</button>
-                        </div>
-                <Home />
+                      
+                     {/*<button>  <Link to ='List', search: name>Submit </Link></button>*/}
+
+                     <Link to={{ pathname: '/List', search: name }}>
+                    Submit
+                </Link>
+                    </div>
+               
             </div>
            
         )

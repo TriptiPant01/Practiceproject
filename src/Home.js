@@ -6,10 +6,14 @@ import { Link } from 'react-router';
 
 class Home extends Component {
   render() {
+    let name = this.props.name;
+    debugger
+    console.log(name);
+
     return (
        <div className="App">
          <div className ="content">
-           <Dashboard />
+           <Dashboard name ={name} />
           </div>
       </div>
     );
