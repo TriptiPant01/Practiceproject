@@ -1,40 +1,39 @@
 import React, { Component } from 'react';
 import './App.css';
-import ProjectList from './ProjectList.js';
 
 class Project extends Component {
+  constructor(props) {
+    super(props);
+    this.delete= this.delete.bind(this);
+}
+  delete() {
+    console.log("delete");
+  }
   render() {
-    
-    let rows =[];
+    let pro=[];
     let projectlist =this.props.project ;
     let searchtext = this.props.searchtext;
-         projectlist.forEach((element) => {
-            if(element.title.indexOf(this.props.searchtext)==-1) {
-                return null;
+    (projectlist.forEach((proj) => {
+            if(proj.title.indexOf(searchtext) === -1){
+              return null;
             }
-            rows.push(element)
-        });
-     
-        debugger
-       {projectlist.map((elemet)=>{
-             console.log(elemet.title)
-           })}
-       
-        return (
-          
-            <ul>
-              {projectlist.map((elemet)=>{
-                    <li>{elemet}
-                      <button>Delete</button>
-                    </li>}
-              )}
-          
-           </ul>
-        
-    
-        )
-    }
-}
+              pro.push(proj)
 
+        }))
+        console.log(pro);
+
+    return (
+       <div className="test">
+       
+          <ul>
+                {pro.map((proj => <li key={proj.title}><strong>{proj.title}</strong>- {proj.category}
+                  <button onClick={this.delete}>Delete</button>
+                  </li>))}
+           </ul>
+      
+      </div>
+    );
+  }
+}
 
 export default Project;

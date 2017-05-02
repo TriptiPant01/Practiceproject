@@ -1,9 +1,5 @@
 import React, {Component} from 'react';
-import Home from './Home.js';
 import { Link } from 'react-router-dom';
-import Dashboard from './Dashboard.js';
-import List from './List.js';
-
 
 class Login extends Component {
     constructor(props) {
@@ -32,7 +28,7 @@ class Login extends Component {
                         <input type="text" 
                         placeholder="Name" 
                         onChange={this.change}
-                        value = {this.props.name}
+                        value={this.props.name}
                         /><br/>
                       
                      {/*<button>  <Link to ='List', search: name>Submit </Link></button>*/}

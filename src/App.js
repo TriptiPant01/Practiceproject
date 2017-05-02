@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Project from './Project.js';
-import  Link from 'react-router';
 import Login from './Login.js'
 import Home from './Home.js';
-import Dashboard from './Dashboard.js';
 
 class App extends Component {
   constructor(props) {
@@ -30,15 +27,15 @@ handlechange(text) {
  
     return (
       <div className="App">
-           {this.name =="" || this.name ==undefined ?
+           {this.name === "" || this.name === undefined ?
            ( <div> 
              <Login 
-              name ={this.state.name}
-              changevalue ={this.handlechange}
+              name={this.state.name}
+              changevalue={this.handlechange}
             />
             </div>) :
           
-            <Home fullname ={name} />
+            <Home fullname={name} />
            }
       </div>
      

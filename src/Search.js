@@ -18,7 +18,7 @@ class Search extends Component {
        <div className="search">
          
                 <input type="text"
-                 placeholder="search"
+                 placeholder="search through title"
                  onChange={this.change}
                 />
        

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import { Link } from 'react-router-dom';
-import Dashboard from './Dashboard.js';
+
 
 
 class List extends Component {
@@ -21,7 +21,7 @@ this.deletetodo = this.deletetodo.bind(this);
    event.preventDefault();
    let name = this.refs.field.value;
    let counter = this.state.counter;
-   if(name == "" || name ==undefined) 
+   if(name === "" || name === undefined) 
    alert("Please enter something to list");
    else { let todo = {
      name,
@@ -46,7 +46,7 @@ this.deletetodo = this.deletetodo.bind(this);
   
     let todos = this.state.todos;
     let todo = todos.find(function(todo) {
-      return todo.counter == index
+      return todo.counter === index
     });
 
     todos.splice(todo,1);
@@ -72,16 +72,16 @@ this.deletetodo = this.deletetodo.bind(this);
           {/*welcome {this.props.name}<br/>*/}
             <button>Todo List </button>
          <Link to={{ pathname: '/Dashboard', search: name }}> <button>Dashboard</button> </Link>
-             <Link to ="/">  <button>Logout</button> </Link>
-                <div className ="body">
-                  <form ref ="todoform">
+             <Link to="/">  <button>Logout</button> </Link>
+                <div className="body">
+                  <form ref="todoform">
                     <input type="text" ref="field" placeholder="list" />
                     <button onClick={this.addtodo}>Add</button>
                     </form>
                 <div className="list">
                   <h2>Todo List </h2>
                 <ul>
-                    {todos.map((todo => <li key ={todo.counter}>{todo.name}
+                    {todos.map((todo => <li key={todo.counter}>{todo.name}
                       <button onClick={this.deletetodo.bind(null,todo.counter)}>Delete</button>
                     </li>))}
                 </ul>
