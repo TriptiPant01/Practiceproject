@@ -8,20 +8,20 @@
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     font-size: 15px;
-    line-height: 1.5;
+    line-height: 3.5;
     padding: o;
     text-align: center;
-    background-color: #b9c2ca;
-    border: 1px solid;
    
    
 
 }
 .loginform{
   color: aliceblue;
+  margin-top: 160px;
 }
 h1{
-  font-size: 20px
+  font-size: 20px;
+  margin-bottom: -25px;
 }
 button {
     color: #f0f8fb;
@@ -30,14 +30,11 @@ button {
     margin-left: 10px;
     margin-top: 19px;
 }
-.body {
+body {
 
-    width: 50%;
-    /* height: 100%; */
-    margin-left: 312px;
-    margin-top: 130px;
-    margin-bottom: 39px;
-    padding-bottom: 23px;
+    width: 100%;
+    background-color: lightblue;
+   
   
 
 }
@@ -46,15 +43,15 @@ form {
  
 }
 ul {
-  color: azure;
-  list-style-type: none;
-      text-align: center;
+     color: azure;
+    list-style-type: none;
     padding-bottom: 12px;
+    margin: 21px 46px 15px 22px;
  
 }
 ul li {
   border: 1px solid;
-  width: 571px;
+
   padding-bottom: 10px;
 }
 .list{
@@ -74,3 +71,35 @@ ol {
 .search{
   
 }
+.comment-firstpageload{
+  position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background-color: #33334a;
+    height: 41px;
+    width: 200px;
+    border: 1px solid;
+}
+.comment-block{
+   height: 411px;
+    background-color:#33334a;
+    margin-top: -236px;
+    width: 201px;
+    position: fixed;
+    right: 0px;
+}
+.commentText ul li{
+    line-height: 15px;
+    font-size: 10px;
+    text-align: left;
+    margin-left: -46px;
+    border: 1px;
+}   
+a{
+      text-decoration: none;
+    color: white;
+    border: 1px solid;
+    border-radius: 11px;
+    padding: 5px;
+}
+

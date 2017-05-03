@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
+import Dashboard from './Dashboard.js';
 
 class Login extends Component {
     constructor(props) {
@@ -33,7 +34,7 @@ class Login extends Component {
                       
                      {/*<button>  <Link to ='List', search: name>Submit </Link></button>*/}
 
-                     <Link to={{ pathname: '/List', search: name }}>
+                     <Link to={{ pathname: '/Dashboard', search: name }}>
                     Submit
                 </Link>
                     </div>
