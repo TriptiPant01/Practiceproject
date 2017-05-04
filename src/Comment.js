@@ -30,7 +30,7 @@ class Comment extends Component {
                     />
                    
           <ul>
-                {comment.map((proj,index) => <li key={index}><strong>{proj}</strong>
+                {comment.map((comment,index) => <li key={index}>{comment}
                  
                   </li>)}
            </ul>

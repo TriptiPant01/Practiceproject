@@ -28,8 +28,8 @@ class Project extends Component {
        <div className="test">
        
           <ul>
-                {pro.map((proj => <li key={proj.title}><strong>{proj.title}</strong>- {proj.category}
-                  <button onClick={this.delete.bind(null,proj.id)}>Delete</button>
+                {pro.map((proj => <li key={proj.title}><strong>{proj.title}</strong>: {proj.category}
+                  <button onClick={this.delete.bind(null,proj.counter)}>Delete</button>
                   </li>))}
            </ul>
       
